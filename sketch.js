@@ -65,7 +65,7 @@ button.position(400,125);
 
 if(button.mousePressed(function(){
 foodS=foodS-1;
-gameState=1;
+gamestate=1;
 db.ref("/").update({"gameState":gamestate});
 }));
 
@@ -80,7 +80,7 @@ addFood.position(500,125)
 
 if(addFood.mousePressed(function(){
   foodS=foodS+1;
-  gameState=2;
+  gamestate=2;
   database.ref('/').update({'gameState':gamestate});
 }));
 
@@ -95,7 +95,7 @@ dog.y=250;
 var Bath= createButton("I want to take bath");
 Bath.position(580,125);
 if(Bath.mousePressed(function(){
-  gameState=3;
+  gamestate=3;
   db.ref("/").update({"gameState": gamestate});
 }));
 
@@ -108,7 +108,7 @@ if(gamestate===3){
 var Sleep= createButton("I am very sleepy");
 Sleep.position(710,125);
 if(Sleep.mousePressed(function(){
-  gameState=4;
+  gamestate=4;
   db.ref("/").update({"gameState": gamestate});
 }));
 
@@ -122,7 +122,7 @@ if(gamestate===4){
 var Play=createButton("Lets play!");
 Play.position(500,160)
 if(Play.mousePressed(function(){
-  gameState=5;
+  gamestate=5;
   db.ref("/").update({"gameState": gamestate});
 }));
 
@@ -135,7 +135,7 @@ if(gamestate===5){
 var PlayInGarden=createButton("Lets play in the park!");
 PlayInGarden.position(585,160)
 if(PlayInGarden.mousePressed(function(){
-  gameState=6;
+  gamestate=6;
   db.ref("/").update({"gameState": gamestate});
 }));
 
